@@ -22,7 +22,7 @@ describe(Movie) do
   end
 
   describe("#==") do
-    xit("is the same movie if it has the same name and id") do
+    it("is the same movie if it has the same name and id") do
       movie = Movie.new({:name => "Oceans Eleven", :id => nil})
       movie2 = Movie.new({:name => "Oceans Eleven", :id => nil})
       expect(movie).to(eq(movie2))
@@ -30,7 +30,7 @@ describe(Movie) do
   end
 
   describe("#update") do
-    xit("lets you update movies in the database") do
+    it("lets you update movies in the database") do
       movie = Movie.new({:name => "Oceans Eleven", :id => nil})
       movie.save()
       movie.update({:name => "Oceans Twelve"})
@@ -39,7 +39,7 @@ describe(Movie) do
   end
 
   describe("#delete") do
-    xit("lets you delete a movie from the database") do
+    it("lets you delete a movie from the database") do
       movie = Movie.new({:name => "Oceans Eleven", :id => nil})
       movie.save()
       movie2 = Movie.new({:name => "Oceans Twelve", :id => nil})
