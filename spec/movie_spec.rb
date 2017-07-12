@@ -12,7 +12,7 @@ describe(Movie) do
   end
 
   describe(".find") do
-    xit("returns a movie by its ID number") do
+    it("returns a movie by its ID number") do
       test_movie = Movie.new({:name => "Oceans Eleven", :id => nil})
       test_movie.save()
       test_movie2 = Movie.new({:name => "Oceans twelve", :id => nil})
